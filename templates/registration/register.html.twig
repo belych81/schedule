@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block body %}
+  <div class="reg-form">
+    <div>
+      <h1>Регистрация</h1>
+
+      {% for flashError in app.flashes('verify_email_error') %}
+          <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+      {% endfor %}
+
+      {% if confirmMessage is defined %}
+          <div class="alert alert-info">{{ confirmMessage }}</div>
+      {% else %}
+        {{ form_start(registrationForm) }}
+            {{ form_row(registrationForm.email) }}
+            {{ form_row(registrationForm.password.first) }}
+            {{ form_row(registrationForm.password.second) }}
+            <div class="reg-submit-container">
+              <input type="submit" value="Отправить" class="reg-submit" />
+              </div>
+        {{ form_end(registrationForm) }}
+        <div>Нажимая кнопку "Отправить" вы подтверждаете согласие на обработку
+           персональных данных</a>
+        </div>
+
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
