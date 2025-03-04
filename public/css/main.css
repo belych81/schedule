@@ -7,5 +7,62 @@ body {
     font-size: 16px;
 }
 .login_form {
-    margin: auto;
+    margin: 50px auto 0;
+    width: 256px;
+}
+._flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.login_form .form__submit {
+    margin-top: 28px;
+}
+.login_form button {
+    color: #FFF;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #44943D;
+    transition: background .2s linear;
+    font-size: 15px;
+    line-height: 38px;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 20px;
+}
+.login_form button:hover,
+.login_form button:active {
+    background: #26784c;
+}
+.login_form .form__line {
+    margin-bottom: 20px;
+}
+.login_form label {
+    line-height: 30px;
+}
+.login_form .form__input,
+.login_form input[type="email"],
+.login_form input[type="password"] {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    height: 38px;
+    padding: 0 29px;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    background: #F6F6F6;
+    transition: color .2s linear, border .2s linear;
+}
+.register_link {
+    text-decoration: none;
+    font-weight: 550;
+    color: #26784c;
+    font-size: 18px;
 }
