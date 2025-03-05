@@ -151,11 +151,6 @@ export default {
 </script>
 
 <style scoped>
-._flex {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
 button {
   color: inherit;
   font-family: inherit;
